@@ -1,0 +1,242 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	/* Base Colors */
+	--colors-black: hsl(0deg 0% 0%);
+	--colors-white: hsl(0deg 0% 100%);
+
+	/* Gray Colors - Dark */
+	--colors-gray-dark-100: hsl(0deg 0% 8.6%);
+	--colors-gray-dark-200: hsl(0deg 0% 11%);
+	--colors-gray-dark-300: hsl(0deg 0% 13.7%);
+	--colors-gray-dark-400: hsl(0deg 0% 15.7%);
+	--colors-gray-dark-500: hsl(0deg 0% 18%);
+	--colors-gray-dark-600: hsl(0deg 0% 20.4%);
+	--colors-gray-dark-700: hsl(0deg 0% 24.3%);
+	--colors-gray-dark-800: hsl(0deg 0% 31.4%);
+	--colors-gray-dark-900: hsl(0deg 0% 43.9%);
+	--colors-gray-dark-1000: hsl(0deg 0% 49.4%);
+	--colors-gray-dark-1100: hsl(0deg 0% 62.7%);
+	--colors-gray-dark-1200: hsl(0deg 0% 92.9%);
+
+	/* Gray Colors - Light */
+	--colors-gray-light-100: hsl(0deg 0% 98.8%);
+	--colors-gray-light-200: hsl(0deg 0% 97.3%);
+	--colors-gray-light-300: hsl(0deg 0% 95.3%);
+	--colors-gray-light-400: hsl(0deg 0% 92.9%);
+	--colors-gray-light-500: hsl(0deg 0% 91%);
+	--colors-gray-light-600: hsl(0deg 0% 88.6%);
+	--colors-gray-light-700: hsl(0deg 0% 85.9%);
+	--colors-gray-light-800: hsl(0deg 0% 78%);
+	--colors-gray-light-900: hsl(0deg 0% 56.1%);
+	--colors-gray-light-1000: hsl(0deg 0% 52.2%);
+	--colors-gray-light-1100: hsl(0deg 0% 43.5%);
+	--colors-gray-light-1200: hsl(0deg 0% 9%);
+
+	/* Brand Colors */
+	--variables-colors-brand-primary: hsl(153.1deg 60.2% 52.7%);
+	--variables-colors-brand-accent: hsl(152.9deg 56.1% 46.5%);
+
+	/* Code Block Colors */
+	--code-block-1: hsl(170.6deg 43.2% 51%);
+	--code-block-2: hsl(33.1deg 80% 52.9%);
+	--code-block-3: hsl(83.8deg 61.6% 48%);
+	--code-block-4: hsl(276.3deg 60% 52.9%);
+	--code-block-5: hsl(14deg 80.4% 58%);
+
+	/* Border Radius */
+	--radius: 0.5rem;
+	--borderradius-xs: 2px;
+	--borderradius-sm: 4px;
+	--borderradius-lg: 8px;
+	--borderradius-xl: 16px;
+}
+
+/* Light Theme */
+:root {
+	--background: var(--colors-gray-light-100);
+	--foreground: var(--colors-gray-light-1200);
+
+	--border-stronger: hsl(0deg 0% 56.1%);
+	--border-strong: hsl(0deg 0% 83.1%);
+	--border-default: hsl(0deg 0% 87.5%);
+
+	--background-muted: hsl(0deg 0% 96.9%);
+	--background-surface-400: hsl(0deg 0% 89.8%);
+	--background-surface-300: hsl(0deg 0% 92.9%);
+	--background-surface-200: hsl(0deg 0% 95.3%);
+	--background-surface-100: hsl(0deg 0% 98.8%);
+	--background-surface-75: hsl(0deg 0% 100%);
+
+	--foreground-muted: hsl(0deg 0% 69.8%);
+	--foreground-lighter: hsl(0deg 0% 43.9%);
+	--foreground-light: hsl(0deg 0% 32.2%);
+
+	--brand-default: hsl(152.9deg 60% 52.9%);
+	--brand-button: hsl(151.8deg 47.1% 40.8%);
+	--brand-button-dark: hsl(151.8deg 47.1% 35.8%);
+	--brand-bg: hsl(151.8deg 47.1% 55.8%);
+	--brand-bg-dark: hsl(151.8deg 47.1% 65.8%);
+	--brand-link: hsl(153.4deg 100% 36.7%);
+
+	/* Alternative Backgrounds */
+	--background-alternative-default: hsl(0deg 0% 99.2%);
+	--background-alternative-200: hsl(0deg 0% 100%);
+
+	/* Button & Control Specific */
+	--background-button-default: var(--colors-gray-light-100);
+	--background-control: var(--colors-gray-light-300);
+	--border-button-hover: var(--colors-gray-light-700);
+	--border-button-default: var(--colors-gray-light-600);
+	--border-control: var(--colors-gray-light-800);
+
+	/* Overlay */
+	--background-overlay-hover: var(--colors-gray-light-300);
+	--background-overlay-default: var(--colors-gray-light-100);
+	--border-overlay: var(--colors-gray-light-500);
+
+	/* Selection */
+	--background-selection: var(--colors-gray-light-400);
+
+	/* Warning Colors */
+	--warning-default: hsl(38.9deg 100% 57.1%);
+	--warning-600: hsl(30.3deg 80.3% 47.8%);
+	--warning-500: hsl(36.3deg 85.7% 67.1%);
+	--warning-400: hsl(41.9deg 100% 81.8%);
+	--warning-300: hsl(44.3deg 100% 91.8%);
+	--warning-200: hsl(40deg 81.8% 97.8%);
+
+	/* Destructive Colors */
+	--destructive-default: hsl(10.2deg 77.9% 53.9%);
+	--destructive-600: hsl(9.9deg 82% 43.5%);
+	--destructive-500: hsl(10.4deg 77.1% 79.4%);
+	--destructive-400: hsl(7.1deg 91.3% 91%);
+	--destructive-300: hsl(7.1deg 100% 96.7%);
+	--destructive-200: hsl(0deg 100% 99.4%);
+
+	/* Secondary Colors */
+	--secondary-default: hsl(247.8deg 100% 70%);
+	--secondary-400: hsl(248.3deg 54.5% 25.9%);
+	--secondary-200: hsl(248deg 53.6% 11%);
+}
+
+/* Dark Theme */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background: var(--colors-gray-dark-200);
+		--foreground: var(--colors-gray-dark-1200);
+
+		--border-stronger: var(--colors-gray-dark-800);
+		--border-strong: var(--colors-gray-dark-700);
+		--border-default: var(--colors-gray-dark-600);
+
+		--background-muted: var(--colors-gray-dark-400);
+		--background-surface-400: var(--colors-gray-dark-700);
+		--background-surface-300: var(--colors-gray-dark-500);
+		--background-surface-200: var(--colors-gray-dark-400);
+		--background-surface-100: var(--colors-gray-dark-300);
+		--background-surface-75: var(--colors-gray-dark-200);
+
+		--foreground-muted: var(--colors-gray-dark-900);
+		--foreground-lighter: var(--colors-gray-dark-1000);
+		--foreground-light: var(--colors-gray-dark-1100);
+
+		--brand-default: hsl(153.1deg 60.2% 52.7%);
+		--brand-button: hsl(151.8deg 47.1% 40.8%);
+		--brand-button-dark: hsl(151.8deg 47.1% 35.8%);
+		--brand-bg: hsl(151.8deg 47.1% 20.8%);
+		--brand-bg-dark: hsl(151.8deg 47.1% 15.8%);
+		--brand-link: hsl(153.1deg 60.2% 52.7%);
+
+		/* Alternative Backgrounds */
+		--background-alternative-default: var(--colors-gray-dark-100);
+		--background-alternative-200: var(--colors-gray-dark-200);
+
+		/* Button & Control Specific */
+		--background-button-default: var(--colors-gray-dark-500);
+		--background-control: var(--colors-gray-dark-300);
+		--border-button-hover: var(--colors-gray-dark-800);
+		--border-button-default: var(--colors-gray-dark-700);
+		--border-control: var(--colors-gray-dark-600);
+
+		/* Overlay */
+		--background-overlay-hover: var(--colors-gray-dark-500);
+		--background-overlay-default: var(--colors-gray-dark-300);
+		--border-overlay: var(--colors-gray-dark-500);
+
+		/* Selection */
+		--background-selection: var(--colors-gray-dark-600);
+
+		/* Warning Colors */
+		--warning-default: hsl(38.9deg 100% 57.1%);
+		--warning-600: hsl(38.9deg 89.8% 49.8%);
+		--warning-500: hsl(34.8deg 90.9% 21.6%);
+		--warning-400: hsl(33.2deg 100% 14.5%);
+		--warning-300: hsl(32.3deg 100% 10.2%);
+		--warning-200: hsl(36.8deg 100% 6.1%);
+
+		/* Destructive Colors */
+		--destructive-default: hsl(10.2deg 77.9% 53.9%);
+		--destructive-600: hsl(9.7deg 85.2% 62.9%);
+		--destructive-500: hsl(7.9deg 71.6% 29%);
+		--destructive-400: hsl(6.7deg 60% 20.6%);
+		--destructive-300: hsl(7.5deg 51.3% 15.3%);
+		--destructive-200: hsl(10.9deg 23.4% 9.2%);
+
+		/* Secondary Colors */
+		--secondary-default: hsl(0deg 0% 100%);
+		--secondary-400: hsl(0deg 0% 100%);
+		--secondary-200: hsl(0deg 0% 100%);
+
+		/* Code Block Colors */
+		--code-block-1: hsl(170.8deg 43.1% 61.4%);
+		--code-block-2: hsl(33.2deg 90.3% 75.7%);
+		--code-block-3: hsl(83.8deg 61.7% 63.1%);
+		--code-block-4: hsl(276.1deg 67.7% 74.5%);
+		--code-block-5: hsl(13.8deg 89.7% 69.6%);
+	}
+}
+
+body {
+	color: var(--foreground);
+	background: var(--background);
+	font-family:
+		Inter,
+		system-ui,
+		-apple-system,
+		BlinkMacSystemFont,
+		"Segoe UI",
+		Roboto,
+		Oxygen,
+		Ubuntu,
+		Cantarell,
+		"Open Sans",
+		"Helvetica Neue",
+		sans-serif;
+}
+
+@layer base {
+	:root {
+		--sidebar-background: var(--background-surface-100);
+		--sidebar-foreground: var(--foreground);
+		--sidebar-primary: var(--brand-default);
+		--sidebar-primary-foreground: var(--colors-white);
+		--sidebar-accent: var(--background-surface-200);
+		--sidebar-accent-foreground: var(--foreground);
+		--sidebar-border: var(--border-default);
+		--sidebar-ring: var(--brand-link);
+	}
+
+	.dark {
+		--sidebar-background: var(--background-surface-75);
+		--sidebar-foreground: var(--foreground-light);
+		--sidebar-primary: var(--brand-default);
+		--sidebar-primary-foreground: var(--colors-black);
+		--sidebar-accent: var(--background-surface-100);
+		--sidebar-accent-foreground: var(--foreground);
+		--sidebar-border: var(--border-default);
+		--sidebar-ring: var(--brand-link);
+	}
+}

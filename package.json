@@ -3,14 +3,20 @@
 	"module": "src/index.ts",
 	"type": "module",
 	"scripts": {
-		"dev": "bun build.ts --src ./src/app.ts --outdir ./public/dist --watch",
+		"dev": "bun build.ts --src ./src/app.ts --outdir ./public/dist --watch & bun dev:tailwind",
+		"dev:tailwind": "tailwindcss -i ./tailwind.css -o ./public/dist/index.css --watch",
 		"build": "bun build.ts --src ./src/app.ts --outdir ./public/dist",
+		"build:tailwind": "tailwindcss -i ./tailwind.css -o ./public/dist/index.css --minify",
 		"pull:ima-latest": "mv src/lib/ima.ts src/lib/ima.ts.bak && curl https://raw.githubusercontent.com/Fergarram/ima/main/ima.ts > src/lib/ima.ts"
 	},
 	"devDependencies": {
-		"@types/bun": "latest"
+		"@types/bun": "latest",
+		"tailwindcss": "3"
 	},
 	"peerDependencies": {
 		"typescript": "^5.0.0"
+	},
+	"dependencies": {
+		"caniuse-lite": "^1.0.30001715"
 	}
 }
