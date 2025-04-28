@@ -1,0 +1,16 @@
+{
+	"name": "ima-app",
+	"module": "src/index.ts",
+	"type": "module",
+	"scripts": {
+		"dev": "bun build.ts --src ./src/app.ts --outdir ./public/dist --watch",
+		"build": "bun build.ts --src ./src/app.ts --outdir ./public/dist",
+		"pull:ima-latest": "mv src/lib/ima.ts src/lib/ima.ts.bak && curl https://raw.githubusercontent.com/Fergarram/ima/main/ima.ts > src/lib/ima.ts"
+	},
+	"devDependencies": {
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	}
+}
